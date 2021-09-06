@@ -1,19 +1,24 @@
 
+import { useHistory } from "react-router";
 import { fileUpload } from "../helpers/fileUpload";
 
 import { types } from "../types/types";
 import { finishLoading, startLoading } from "./ui";
 
 
-export const startUploading =(file)=>{
+export const startUploading =(file, history)=>{
+   
     return async (dispatch)=>{
         dispatch(startLoading())
         const data = await fileUpload(file);
 
-        console.log(data['historial'])
+        // console.log(data['historial'])
+        console.log(data)
         dispatch(finishLoading())
         dispatch(addData(data))
         dispatch(startSaveHistorial(data['historial']))
+        history.push("/results");
+        
         
     }
 }

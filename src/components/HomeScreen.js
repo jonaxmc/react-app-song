@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router';
 
 import { startUploading } from '../actions/data'
 import { pathFile } from '../actions/path';
@@ -11,6 +12,7 @@ import { pathFile } from '../actions/path';
 export const HomeScreen = () => {
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
 
     const [pathState, setPathState] = useState()
@@ -33,7 +35,7 @@ export const HomeScreen = () => {
       
 
         if (pathState) {
-            dispatch(startUploading(pathState))
+            dispatch(startUploading(pathState, history))
         }
     }
 
@@ -43,7 +45,7 @@ export const HomeScreen = () => {
         <div className="home_container">
             <div id="upload-area" className="form">
                 <div className="upload-ui">
-                    <div className="titulo">Drag and drop audio file here</div>
+                    <div className="titulo">Drag and drop audio file here!</div>
                     <p className="titulo">OR</p>
                     <label htmlFor="fileSelector" className="btn-primario">CHOOSE FILE</label>
                     <input

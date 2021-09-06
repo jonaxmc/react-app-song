@@ -1,3 +1,4 @@
+import { Redirect, useHistory } from 'react-router';
 import Swal from 'sweetalert2'
 
 
@@ -13,7 +14,7 @@ export const fileUpload = async (file)=>{
 
     try {
         Swal.fire({
-            title: 'Loading song',
+            title: 'Processing song',
             html: 'Wait a moment please',
             timerProgressBar: true,
             didOpen: ()=>{
@@ -23,7 +24,6 @@ export const fileUpload = async (file)=>{
         )
         const resp = await fetch(cloudUrl, {
             method: 'POST',
-            // mode: 'cors',
             body: formData
         });
 
@@ -32,7 +32,13 @@ export const fileUpload = async (file)=>{
             
             sessionStorage.setItem('datos', JSON.stringify(cloudResp))
             
-            window.location.href = "/results";
+            // window.location.href = "/results";
+            // window.location.href = "/title-song-recommender-app/#/results";
+            
+            
+
+            Swal.close()
+            
             return cloudResp;
         }else{
             throw await resp.json();
