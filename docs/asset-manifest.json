@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/title-song-recommender-app/static/css/main.2c946ac3.chunk.css",
+    "main.js": "/title-song-recommender-app/static/js/main.cd782bfc.chunk.js",
+    "main.js.map": "/title-song-recommender-app/static/js/main.cd782bfc.chunk.js.map",
+    "runtime-main.js": "/title-song-recommender-app/static/js/runtime-main.6a85bd54.js",
+    "runtime-main.js.map": "/title-song-recommender-app/static/js/runtime-main.6a85bd54.js.map",
+    "static/js/2.7b8f7e4e.chunk.js": "/title-song-recommender-app/static/js/2.7b8f7e4e.chunk.js",
+    "static/js/2.7b8f7e4e.chunk.js.map": "/title-song-recommender-app/static/js/2.7b8f7e4e.chunk.js.map",
+    "index.html": "/title-song-recommender-app/index.html",
+    "static/css/main.2c946ac3.chunk.css.map": "/title-song-recommender-app/static/css/main.2c946ac3.chunk.css.map",
+    "static/js/2.7b8f7e4e.chunk.js.LICENSE.txt": "/title-song-recommender-app/static/js/2.7b8f7e4e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6a85bd54.js",
+    "static/js/2.7b8f7e4e.chunk.js",
+    "static/css/main.2c946ac3.chunk.css",
+    "static/js/main.cd782bfc.chunk.js"
+  ]
+}
